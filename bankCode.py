@@ -10,7 +10,7 @@ class BankSystem:
             if entered_pin == self.correct_pin:
                 print("Access granted!\n")
                 return True
-            if entered_pin < 4-digits:
+            if len(entered_pin) < 4 or not entered_pin.isdigit():
                 print("Pin should be 4-digits\n")
             else:
                 attempts += 1
